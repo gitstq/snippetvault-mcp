@@ -1,0 +1,2 @@
+[console_scripts]
+snippetvault-mcp = snippetvault_mcp.server:main
