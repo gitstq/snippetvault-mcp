@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "snippetvault-mcp"
+version = "1.0.0"
+description = "🚀 A lightweight MCP server for intelligent code snippet management with semantic search"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Gitstq", email = "gitstq@example.com"}
+]
+keywords = ["mcp", "code-snippets", "ai", "developer-tools", "semantic-search", "claude", "cursor"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Code Generators",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "mcp>=1.0.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "numpy>=1.24.0",
+    "sentence-transformers>=2.2.0",
+    "pygments>=2.15.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.5.0",
+]
+
+[project.scripts]
+snippetvault-mcp = "snippetvault_mcp.server:main"
+
+[project.urls]
+Homepage = "https://github.com/gitstq/snippetvault-mcp"
+Repository = "https://github.com/gitstq/snippetvault-mcp"
+Issues = "https://github.com/gitstq/snippetvault-mcp/issues"
+Documentation = "https://github.com/gitstq/snippetvault-mcp#readme"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
