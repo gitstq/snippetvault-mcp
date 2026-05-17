@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: snippetvault-mcp
+Version: 1.0.0
+Summary: 🚀 A lightweight MCP server for intelligent code snippet management with semantic search
+Author-email: Gitstq <gitstq@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/gitstq/snippetvault-mcp
+Project-URL: Repository, https://github.com/gitstq/snippetvault-mcp
+Project-URL: Issues, https://github.com/gitstq/snippetvault-mcp/issues
+Project-URL: Documentation, https://github.com/gitstq/snippetvault-mcp#readme
+Keywords: mcp,code-snippets,ai,developer-tools,semantic-search,claude,cursor
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Code Generators
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp>=1.0.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: pydantic-settings>=2.0.0
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: sentence-transformers>=2.2.0
+Requires-Dist: pygments>=2.15.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: ruff>=0.1.0; extra == "dev"
+Requires-Dist: mypy>=1.5.0; extra == "dev"
+Dynamic: license-file
